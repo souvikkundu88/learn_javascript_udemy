@@ -24,6 +24,7 @@ document.querySelector('.check').addEventListener('click', function() {
             document.querySelector('.message').textContent = 'higher';
         } else {
             document.querySelector('.message').textContent = 'you lost!';
+            document.querySelector('.score').textContent = 0;
         }
     }
     else if (guess < secretNumber) {
@@ -33,6 +34,7 @@ document.querySelector('.check').addEventListener('click', function() {
             document.querySelector('.message').textContent = 'lower';
         } else {
             document.querySelector('.message').textContent = 'you lost!';
+            document.querySelector('.score').textContent = 0;
         }
     }
 });

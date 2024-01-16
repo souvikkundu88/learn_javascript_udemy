@@ -30,10 +30,10 @@ document.querySelector('.check').addEventListener('click', function () {
           document.querySelector('.message').textContent =
               guess > secretNumber ? 'Higher' : 'Lower';
           score--;
-          document.querySelector('.score') = score;
+          document.querySelector('.score').textContent = score;
         } else {
-          document.querySelector('.score') = 0;
-          document.querySelector('.message') = 'You lost!'
+          document.querySelector('.score').textContent = 0;
+          document.querySelector('.message').textContent = 'You lost!'
         }
   }
     // else if (guess > secretNumber) { // when guess is high

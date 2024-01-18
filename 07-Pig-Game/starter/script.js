@@ -51,3 +51,13 @@ btnRoll.addEventListener('click', function() {
     }
 });
 
+btnHold.addEventListener('click', function() {
+    // add current score to active player's score
+    score[activePlayer] += currentScore;
+    document.getElementById(`score--${activePlayer}`).textContent = score[activePlayer];
+
+    // check if player's score is >= 100
+    
+    // switch to the next player
+    switchPlayer();
+})

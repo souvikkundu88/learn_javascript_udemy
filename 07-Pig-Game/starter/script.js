@@ -34,10 +34,11 @@ btnRoll.addEventListener('click', function() {
     if(dice !== 1) {
         // add dice to the current score
         currentScore += dice;
-        document.getElementById(`current-${activePlayer}`).textContent = currentScore;
+        document.getElementById(`current--${activePlayer}`).textContent = currentScore;
     } else {
         // switch to the next player
-        currentScore = 0;
+        document.getElementById(`current--${activePlayer}`).textContent = 0;
         activePlayer = activePlayer === 0 ? 1 :0;
+        currentScore = 0;
     }
 })

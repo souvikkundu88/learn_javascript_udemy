@@ -55,18 +55,20 @@ btnRoll.addEventListener('click', function () {
 });
 
 btnHold.addEventListener('click', function () {
-  // add current score to active player's score
-  score[activePlayer] += currentScore;
-  document.getElementById(`score--${activePlayer}`).textContent = score[activePlayer];
-
-  // check if player's score is >= 100
-  if (score[activePlayer] >= 20) {
-    // finish the game
-    playing = false;
-    document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
-    document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
-  } else {
-    // switch to the next player
-    switchPlayer();
-  }
+    if(playing) {
+        // add current score to active player's score
+        score[activePlayer] += currentScore;
+        document.getElementById(`score--${activePlayer}`).textContent = score[activePlayer];
+      
+        // check if player's score is >= 100
+        if (score[activePlayer] >= 20) {
+          // finish the game
+          playing = false;
+          document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
+          document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
+        } else {
+          // switch to the next player
+          switchPlayer();
+        }
+    }
 });

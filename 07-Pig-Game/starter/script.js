@@ -17,6 +17,7 @@ score1El.textContent = 0;
 diceEl.classList.add('hidden');
 
 let currentScore = 0;
+let activePlayer = 0;
 
 // rolling dice functionality
 btnRoll.addEventListener('click', function() {

@@ -16,6 +16,7 @@ score0El.textContent = 0;
 score1El.textContent = 0;
 diceEl.classList.add('hidden');
 
+const score = [0,0];
 let currentScore = 0;
 let activePlayer = 0;
 
@@ -32,11 +33,11 @@ btnRoll.addEventListener('click', function() {
     // 3. check for a rolled 1: if true , switch to next player
     if(dice !== 1) {
         // add dice to the current score
-        currentScore += score0El;
-        current0El.textContent = currentScore; // CHANGE LATER
+        currentScore += dice;
+        document.getElementById(`current-${activePlayer}`).textContent = currentScore;
     } else {
         // switch to the next player
         currentScore = 0;
-        current0El.textContent = currentScore;
+        activePlayer = activePlayer === 0 ? 1 :0;
     }
 })

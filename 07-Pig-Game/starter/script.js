@@ -36,12 +36,14 @@ btnNew.addEventListener('click', function() {
     score0El.textContent = 0;
     score1El.textContent = 0;
     diceEl.classList.add('hidden');
-    current0El = 0;
-    current1El = 0;
+    current0El.textContent = 0;
+    current1El.textContent = 0;
     activePlayer = 0;
     playing = true;
+    player0EL.classList.remove('player--winner');
+    player1El.classList.remove('player--winner');
     player0EL.classList.add('player--active');
-    document.querySelector(`.player--${activePlayer}`).classList.remove('player--winner');
+    player1El.classList.remove('player--active');
 });
 
 

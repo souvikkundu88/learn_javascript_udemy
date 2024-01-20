@@ -65,8 +65,7 @@ btnRoll.addEventListener('click', function() {
     
 
     // 2. display dice
-    diceEl.classList.remove('hidden');
-    diceEl.src = `dice-${dice}.png`;
+    
 
     // 3. check for a rolled 1: if true , switch to next player
     if (dice !== 1) {

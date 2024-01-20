@@ -58,7 +58,7 @@ btnNew.addEventListener('click', init);
 
 
 // rolling dice functionality
-('click', function() {
+btnRoll.addEventListener('click', function() {
   if(playing) {
     // 1. generating random dice roll
     const dice = Math.trunc(Math.random() * 6) + 1;

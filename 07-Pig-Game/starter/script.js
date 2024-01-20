@@ -95,7 +95,7 @@ btnHold.addEventListener('click', function() {
           document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
         } else {
           // switch to the next player
-          switchPlayer();
+          
         }
     }
 });
